@@ -7,6 +7,14 @@ parse_git_branch() {
 }
 export PS1="[\w\[\033[31m\]\$(parse_git_branch)\[\033[00m\]]$\[\033[00m\] "
 
+# terminal transparency
+[ -n "$XTERM_VERSION" ] && transset-df -a 0.8 > /dev/null
+
+# VirtualENVWrapper
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+
 #
 # Aliases
 #
