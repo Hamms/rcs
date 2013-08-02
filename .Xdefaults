@@ -1,5 +1,7 @@
 xterm*loginshell: true
 
+xterm*selecttoclipboard: true
+
 xterm*foreground: rgb:a8/a8/a8
 xterm*background: rgb:00/00/00
 xterm*color0: rgb:00/00/00
