@@ -1,5 +1,5 @@
 [user]
-	email = elijah@concentricsky.com
+    email = elijah@concentricsky.com
     name = Elijah Hamovitz
 
 [github]
@@ -9,4 +9,7 @@
     prettylog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 
 [core]
-	editor = /usr/bin/vim
+    editor = /usr/bin/vim
+
+[color]
+    ui = true
