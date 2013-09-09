@@ -1,4 +1,1 @@
-# background from either:
-# http://orioto.free.fr//Prints/ThroughTheNight1080p.jpg
-# http://orioto.free.fr//Prints/ThroughTheNight1200p.jpg
 feh  --bg-fill '/home/elijah/pictures/ThroughTheNight1080p.jpg' 
