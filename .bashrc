@@ -33,8 +33,9 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 export HISTCONTROL=ignoreboth
-export HISTSIZE=1000
-export HISTFILESIZE=2000
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+export HISTTIMEFORMAT="%Y%m%d %T  "
 export PROMPT_COMMAND='history -a'
 
 # append to the history file, don't overwrite it
