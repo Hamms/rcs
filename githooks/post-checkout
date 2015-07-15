@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+
+import os
+import subprocess
+import sys
+
+FILES = [
+    'requirements.txt',
+    'package.json',
+    'bower.json',
+    'Gemfile'
+]
+
+def main(old, new):
+
+    p = subprocess.Popen(['git', 'diff', old, new, '--name-only'], stdout=subprocess.PIPE)
+    out, err = p.communicate()
+    for line in out.splitlines():
+        if os.path.basename(line) in FILES:
+            print("{} changed!".format(line))
+
+if __name__ == '__main__':
+    _, prev_ref, new_ref, is_branch = sys.argv
+    if int(is_branch):
+        main(prev_ref, new_ref)
