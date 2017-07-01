@@ -61,10 +61,22 @@ if [ -f $HOME/.aws_config ]; then
     source $HOME/.aws_config
 fi
 
-# VirtualENVWrapper
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-fi
+# Chef
+export CDO_CHEF_NODE_NAME="ehamovitz"
+
+# RBENV
+export PATH=$HOME/.rbenv/bin:$PATH
+
+# relative node_modules
+export PATH=node_modules/.bin:$PATH
+
+# local binaries
+export PATH=$HOME/bin:$HOME/bin/node_modules/.bin:$PATH
+
+## VirtualENVWrapper
+#if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+#    source /usr/local/bin/virtualenvwrapper.sh
+#fi
 
 if [ -f $HOME/.git-prompt.sh ]; then
     source $HOME/.git-prompt.sh
