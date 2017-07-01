@@ -7,9 +7,18 @@
 
 [alias]
     prettylog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    assign =  "!f() { cd $GIT_PREFIX; git blame $1 | tr -s ' ' | cut -d ' ' -f 3 | sort | uniq -c | sort -g; }; f"
+    co = checkout
+    up = pull --rebase --autostash
 
 [core]
     editor = vim
 
 [color]
     ui = true
+
+[push]
+	default = current
+
+[pack]
+	windowMemory = 100m
