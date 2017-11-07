@@ -10,6 +10,8 @@
     assign =  "!f() { cd $GIT_PREFIX; git blame $1 | tr -s ' ' | cut -d ' ' -f 3 | sort | uniq -c | sort -g; }; f"
     co = checkout
     up = pull --rebase --autostash
+    amend = commit --amend --no-edit
+    edit = commit --amend
 
 [core]
     editor = vim
