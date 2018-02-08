@@ -64,9 +64,6 @@ fi
 # Chef
 export CDO_CHEF_NODE_NAME="ehamovitz"
 
-# RBENV
-export PATH=$HOME/.rbenv/bin:$PATH
-
 # relative node_modules
 export PATH=node_modules/.bin:$PATH
 
@@ -94,4 +91,21 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# rbenv
+if [ -d $HOME/.rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
 
+# nvm
+if [ -d $HOME/.nvm ]; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+fi
+
+# pyenv
+if [ -d $HOME/.pyenv ]; then
+  export PATH="$HOME/.pyenv/bin:$PATH"
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
