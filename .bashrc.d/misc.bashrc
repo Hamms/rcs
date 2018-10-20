@@ -1,3 +1,6 @@
+# History verification (when using things like !$)
+shopt -s histverify
+
 # Use Vi-style controls for command editing
 set -o vi
 export EDITOR=vim
