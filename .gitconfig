@@ -1,0 +1,25 @@
+[user]
+    email = elijahhamovitz@gmail.com
+    name = Elijah Hamovitz
+
+[github]
+    user = Hamms
+
+[alias]
+    prettylog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    co = checkout
+    up = pull --rebase --autostash
+    amend = commit --amend --no-edit
+    edit = commit --amend
+
+[core]
+    editor = vim
+
+[color]
+    ui = true
+
+[push]
+    default = current
+
+[pack]
+    windowMemory = 100m
