@@ -1,3 +1,6 @@
+# Use Vi-style controls for command editing
+set -o vi
+export EDITOR=vim
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
